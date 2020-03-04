@@ -1,0 +1,3 @@
+rootProject.name='My Sunmi'
+include ':app'
+include ':app:sunmilib'
