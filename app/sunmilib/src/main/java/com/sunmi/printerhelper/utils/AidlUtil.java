@@ -273,9 +273,7 @@ public class AidlUtil {
         }
 
         try {
-            woyouService.setAlignment(1, null);
             woyouService.printBitmap(bitmap, null);
-            woyouService.lineWrap(3, null);
         } catch (RemoteException e) {
             e.printStackTrace();
         }
