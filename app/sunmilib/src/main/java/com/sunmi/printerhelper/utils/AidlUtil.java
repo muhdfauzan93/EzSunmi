@@ -10,7 +10,6 @@ import android.graphics.Bitmap;
 import android.os.IBinder;
 import android.os.RemoteException;
 import android.util.Log;
-import android.widget.Toast;
 
 import com.fauzan.sunmilib.R;
 import com.sunmi.printerhelper.bean.TableItem;
@@ -24,6 +23,7 @@ import woyou.aidlservice.jiuiv5.IWoyouService;
 
 
 public class AidlUtil {
+    private final String TAG = AidlUtil.class.getSimpleName();
     private static final String SERVICE＿PACKAGE = "woyou.aidlservice.jiuiv5";
     private static final String SERVICE＿ACTION = "woyou.aidlservice.jiuiv5.IWoyouService";
 
@@ -115,7 +115,7 @@ public class AidlUtil {
 
     public void setDarkness(int index) {
         if (woyouService == null) {
-            Toast.makeText(context, R.string.toast_2, Toast.LENGTH_LONG).show();
+            Log.e(TAG,  context.getResources().getString(R.string.toast_2));
             return;
         }
 
@@ -135,7 +135,7 @@ public class AidlUtil {
      */
     public List<String> getPrinterInfo(PrinterCallback printerCallback1, PrinterCallback printerCallback2) {
         if (woyouService == null) {
-            Toast.makeText(context, R.string.toast_2, Toast.LENGTH_LONG).show();
+            Log.e(TAG,  context.getResources().getString(R.string.toast_2));
             return null;
         }
 
@@ -173,7 +173,7 @@ public class AidlUtil {
      */
     public void initPrinter() {
         if (woyouService == null) {
-            Toast.makeText(context, R.string.toast_2, Toast.LENGTH_LONG).show();
+            Log.e(TAG,  context.getResources().getString(R.string.toast_2));
             return;
         }
 
@@ -189,7 +189,7 @@ public class AidlUtil {
      */
     public void printQr(String data, int modulesize, int errorlevel) {
         if (woyouService == null) {
-            Toast.makeText(context, R.string.toast_2, Toast.LENGTH_LONG).show();
+            Log.e(TAG,  context.getResources().getString(R.string.toast_2));
             return;
         }
 
@@ -207,7 +207,7 @@ public class AidlUtil {
      */
     public void printBarCode(String data, int symbology, int height, int width, int textposition) {
         if (woyouService == null) {
-            Toast.makeText(context, R.string.toast_2, Toast.LENGTH_LONG).show();
+            Log.e(TAG,  context.getResources().getString(R.string.toast_2));
             return;
         }
 
@@ -225,7 +225,7 @@ public class AidlUtil {
      */
     public void printText(String content, float size, boolean isBold, boolean isUnderLine) {
         if (woyouService == null) {
-            Toast.makeText(context, R.string.toast_2, Toast.LENGTH_LONG).show();
+            Log.e(TAG,  context.getResources().getString(R.string.toast_2));
             return;
         }
 
@@ -252,7 +252,7 @@ public class AidlUtil {
     public void setAlignment(int orientation){
         // 0 is left, 1 is center, 2 is right.
         if (woyouService == null) {
-            Toast.makeText(context, R.string.toast_2, Toast.LENGTH_LONG).show();
+            Log.e(TAG,  context.getResources().getString(R.string.toast_2));
             return;
         }
 
@@ -268,7 +268,7 @@ public class AidlUtil {
      */
     public void printBitmap(Bitmap bitmap) {
         if (woyouService == null) {
-            Toast.makeText(context, R.string.toast_2, Toast.LENGTH_LONG).show();
+            Log.e(TAG,  context.getResources().getString(R.string.toast_2));
             return;
         }
 
@@ -285,7 +285,7 @@ public class AidlUtil {
      */
     public void printBitmap(Bitmap bitmap, int orientation) {
         if (woyouService == null) {
-            Toast.makeText(context,"Service Disconnected！", Toast.LENGTH_LONG).show();
+            Log.e(TAG,  context.getResources().getString(R.string.toast_2));
             return;
         }
 
@@ -306,7 +306,7 @@ public class AidlUtil {
      */
     public void printTable(LinkedList<TableItem> list) {
         if (woyouService == null) {
-            Toast.makeText(context, R.string.toast_2, Toast.LENGTH_LONG).show();
+            Log.e(TAG,  context.getResources().getString(R.string.toast_2));
             return;
         }
 
@@ -326,7 +326,7 @@ public class AidlUtil {
      */
     public void print3Line(){
         if (woyouService == null) {
-            Toast.makeText(context, R.string.toast_2, Toast.LENGTH_LONG).show();
+            Log.e(TAG,  context.getResources().getString(R.string.toast_2));
             return;
         }
 
@@ -340,7 +340,7 @@ public class AidlUtil {
 
     public void sendRawData(byte[] data) {
         if (woyouService == null) {
-            Toast.makeText(context, R.string.toast_2, Toast.LENGTH_LONG).show();
+            Log.e(TAG,  context.getResources().getString(R.string.toast_2));
             return;
         }
 
@@ -353,7 +353,7 @@ public class AidlUtil {
 
     public void sendRawDatabyBuffer(byte[] data, ICallback iCallback){
         if (woyouService == null) {
-            Toast.makeText(context, R.string.toast_2, Toast.LENGTH_LONG).show();
+            Log.e(TAG,  context.getResources().getString(R.string.toast_2));
             return;
         }
 
